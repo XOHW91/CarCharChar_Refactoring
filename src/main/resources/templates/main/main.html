@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang = "ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Car Char Char Home</title>
+
+<!-- page css -->
+<th:block layout:fragment="CssFragment">
+  <link rel="stylesheet" type="text/css" href="/resources/static/css/main.css">
+</th:block>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- page script -->
+<th:block layout:fragment="ScriptFragment">
+  <script type="text/javascript" src="/resources/static/js/main/main.js"></script>
+</th:block>
+
+</head>
+
+
+<body>
+<div id="wrapper">
+  <!-- header -->
+  <header class="nav-menu">
+    <div>
+      <img class="logo" src="/resources/static/images/common/logo.png">
+      <nav>
+        <div>
+          <p>
+            <a href="#">차량예약</a>
+          </p>
+        </div>
+        <div>
+          <p>이용안내</p>
+          <p>
+            <a href="#">대여요금</a>
+            <a href="#">대여절차</a>
+          </p>
+        </div>
+        <div>
+          <p>회사소개</p>
+          <p>
+            <a href="#">회사소개</a>
+            <a href="#">찾아오시는 길</a>
+          </p>
+        </div>
+        <div>
+          <p>고객지원</p>
+          <p>
+            <a href="#">공지사항</a>
+            <a href="#">문의사항</a>
+          </p>
+        </div>
+      </nav>
+    </div>
+    <div class="log-bar"></div>
+    <div class="log_btn">
+      <button Onclick="location.href='#'">Login</button>
+      <button Onclick="location.href='#'">Sign up</button>
+    </div>
+  </header>
+
+
+  <!-- 몸통 -->
+  <main>
+    <div class="main_info">
+      <section class="sct01">
+        <video preload="auto" class="video-bg" loop muted autoplay playsinline>
+          <source src="/resources/static/images/main/main.mp4" type="video/mp4">
+        </video>
+        <div class="scroll_msg">Scroll Down</div>
+        <div class="scroll_bar"></div>
+      </section>
+      <section class="sct02">
+        <div>
+          <div>
+            <div class="popular_list"  style="overflow: hidden;"><!-- 차 리스트 -->
+              <div class="main_cont main_scrl1 main_slide">
+                <!-- 캐러셀 -->
+                <input type="radio" name="slide" id="slide1">
+                <input type="radio" name="slide" id="slide2">
+                <input type="radio" name="slide" id="slide3">
+                <div class="slider">
+                  <div class="img1">
+                    <span>인기차량</span>
+                    <h2>The all-new GRANDEUR</h2>
+                    <h4>기술과 감성의 경계를 지운 새로운 경험</h4>
+                    <img src="/resources/static/images/main/grandeur_slide.png">
+                  </div>
+                  <div class="img2">
+                    <span>인기차량</span>
+                    <h2>VENUE</h2>
+                    <h4>오로지 당신을 위한 즐거움</h4>
+                    <img src="/resources/static/images/main/venue_slide.png">
+                  </div>
+                  <div class="img3">
+                    <span>인기차량</span>
+                    <h2>IONIQ 6</h2>
+                    <h4>내가 만드는 세상</h4>
+                    <img src="/resources/static/images/main/IONIQ6_slide.png">
+                  </div>
+                  <!-- 3페이지에서 2페이지, 1페이지로 -->
+                  <label for="slide1" class="p3_middle"></label>
+                  <label for="slide3" class="p3_first"></label>
+                  <!-- 2페이지에서 1페이지, 3페이지로 -->
+                  <label for="slide3" class="p2_first"></label>
+                  <label for="slide2" class="p2_last"></label>
+                  <!-- 1페이지에서 3페이지, 2페이지로 -->
+                  <label for="slide2" class="p1_last"></label>
+                  <label for="slide1" class="p1_middle"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="booking_check"><!-- 예약 확인 -->
+              <div class="main_cont main_scrl2">
+                <div class="book_cont">
+                  <div class="book_input">
+                    <p>대여일<input type="text" placeholder="예약하고자 하는 날짜를 입력하세요."></p>
+                    <p>반납일<input type="text" placeholder="반납하고자 하는 날짜를 입력하세요."></p>
+                  </div>
+                  <div class="book_button">
+                    <button type="submit">날짜검색</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="notice_box"><!-- 공지 -->
+              <div class="main_cont main_scrl3">
+                <div>공지공지</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="scroll_nav_bar">
+        <span class="scroll_circle"></span>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
