@@ -306,7 +306,7 @@ section {
     transform: translate(-50%, -50%);
     width: 90%;
     height: 90%;
-    background: url("../car_images/car_bg.jpg") no-repeat center / cover;
+    background: url("/src/main/resources/static/images/car/car_bg.jpg") no-repeat center / cover;
 }
 div[class^="img"] {padding-top: 60px;}
 div[class^="img"] span {
